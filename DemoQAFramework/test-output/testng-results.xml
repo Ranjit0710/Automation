@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-03-03T12:56:39 IST" name="DemoQA Suite" finished-at="2025-03-03T12:56:40 IST" duration-ms="1268">
+    <groups>
+    </groups>
+    <test started-at="2025-03-03T12:56:39 IST" name="Automation Practice Form Test" finished-at="2025-03-03T12:56:40 IST" duration-ms="1268">
+      <class name="tests.AutomationPracticeFormTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.AutomationPracticeFormTest@49438269]" started-at="2025-03-03T12:54:52 IST" name="setUp" finished-at="2025-03-03T12:56:39 IST" duration-ms="107385" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testFormSubmission()[pri:0, instance:tests.AutomationPracticeFormTest@49438269]" started-at="2025-03-03T12:56:39 IST" name="testFormSubmission" finished-at="2025-03-03T12:56:40 IST" duration-ms="1155" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testFormSubmission -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.AutomationPracticeFormTest@49438269]" started-at="2025-03-03T12:56:41 IST" name="tearDown" finished-at="2025-03-03T12:56:42 IST" duration-ms="1134" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.AutomationPracticeFormTest -->
+    </test> <!-- Automation Practice Form Test -->
+  </suite> <!-- DemoQA Suite -->
+</testng-results>

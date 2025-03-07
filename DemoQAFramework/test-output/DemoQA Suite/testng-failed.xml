@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [DemoQA Suite]">
+  <test thread-count="5" name="Automation Practice Form Test(failed)">
+    <classes>
+      <class name="tests.AutomationPracticeFormTest">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testFormSubmission"/>
+        </methods>
+      </class> <!-- tests.AutomationPracticeFormTest -->
+    </classes>
+  </test> <!-- Automation Practice Form Test(failed) -->
+</suite> <!-- Failed suite [DemoQA Suite] -->
