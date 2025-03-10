@@ -28,19 +28,12 @@ jobs:
 
       - name: Build and Run Tests
         run: |
-          cd DemoQAFramework
+          path: DemoQAFramework/pom.xml
           mvn clean install
           
       - name: Run Tests
         run: mvn test -DsuiteXmlFile=testng.xml
-
-      - name: Archive Test Results
-        if: always()
-        uses: actions/upload-artifact@v4  # Updated version
-        with:
-          name: test-results
-          path: DemoQAFramework/target/surefire-reports/
-
+        
       - name: Archive Extent Reports
         if: always()
         uses: actions/upload-artifact@v4  # Updated version
