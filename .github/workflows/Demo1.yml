@@ -36,3 +36,30 @@ jobs:
         with:
           name: extent-reports
           path: DemoQAFramework/reports/ExtentReport.html
+
+  send_email:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Download Extent Report
+        uses: actions/download-artifact@v4
+        with:
+          name: extent-reports
+          path: reports
+
+      - name: Send Email with Extent Report
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: "your-email@gmail.com"
+          password: ${{ secrets.EMAIL_PASSWORD }}  # Use the App Password stored in GitHub Secrets
+          subject: "Automated Test Report - GitHub Actions"
+          to: "team1@example.com, team2@example.com"
+          from: "your-email@gmail.com"
+          body: "Hello Team,\n\nPlease find the attached Extent Report.\n\nBest,\nCI/CD Pipeline"
+          attachments: "reports/ExtentReport.html"
