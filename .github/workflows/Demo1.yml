@@ -21,6 +21,6 @@ jobs:
           java-version: '17'       # Change version if needed
 
       - name: Build and Run Tests
-        run: |cd Automatio 
+        run: |cd DemoQAFramework
           mvn clean install    # Build the project
           mvn test             # Run tests
