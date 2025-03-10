@@ -1,0 +1,26 @@
+name: Run Java Project
+
+on: 
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set Up Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'  # Use OpenJDK (you can change it)
+          java-version: '17'       # Change version if needed
+
+      - name: Build and Run Tests
+        run: |
+          mvn clean install    # Build the project
+          mvn test             # Run tests
