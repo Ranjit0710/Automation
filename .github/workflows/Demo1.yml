@@ -20,31 +20,31 @@ jobs:
           java-version: '11'
           cache: maven
 
-      - name: Setup Chrome
+       - name: Setup Chrome
       uses: browser-actions/setup-chrome@latest
       
-      - name: Setup Chrome Driver
+       - name: Setup Chrome Driver
       uses: nanasess/setup-chromedriver@v2
     
   
-      - name: Build and Run Tests
+       - name: Build and Run Tests
         run: |
           cd DemoQAFramework  # Move into the project directory
           mvn clean install
        
-      -  name: Run Tests
+       -  name: Run Tests
       run: mvn test -DsuiteXmlFile=testng.xml
 
-      - name: Archive test results
+       - name: Archive test results
       if: always()
       uses: actions/upload-artifact@v3
       with:
-        name: test-results
+       - name: test-results
         path: target/surefire-reports/
         
-      - name: Archive Extent Reports
+       - name: Archive Extent Reports
       if: always()
       uses: actions/upload-artifact@v3
       with:
-        name: extent-reports
+       - name: extent-reports
         path: reports/ExtentReports/
