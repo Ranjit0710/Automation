@@ -57,7 +57,7 @@ jobs:
           server_address: smtp.gmail.com
           server_port: 587
           username: "ranjit.bachute@thinkitive.com"
-          password: ${{ secrets.sfqgammazpvbslyq }}  # Use the App Password stored in GitHub Secrets
+          password: ${{ EMAIL_PSSWORD.sfqgammazpvbslyq }}  # Use the App Password stored in GitHub Secrets
           subject: "Automated Test Report - GitHub Actions"
           to: "ashish.kulkarni@thinkitive.com"
           from: "ranjit.bachute@thinkitive.com"
