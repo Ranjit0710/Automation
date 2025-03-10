@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4  # Updated to latest version
 
       - name: Set Up Java
-        uses: actions/setup-java@v3
+        uses: actions/setup-java@v4  # Updated to latest version
         with:
           distribution: 'temurin'
           java-version: '11'
@@ -28,7 +28,7 @@ jobs:
 
       - name: Build and Run Tests
         run: |
-          cd DemoQAFramework  # Move into the project directory
+          cd DemoQAFramework
           mvn clean install
           
       - name: Run Tests
@@ -36,14 +36,14 @@ jobs:
 
       - name: Archive Test Results
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4  # Updated version
         with:
           name: test-results
           path: DemoQAFramework/target/surefire-reports/
 
       - name: Archive Extent Reports
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4  # Updated version
         with:
           name: extent-reports
           path: DemoQAFramework/reports/ExtentReports/
