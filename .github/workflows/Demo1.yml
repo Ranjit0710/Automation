@@ -1,10 +1,9 @@
-name: Run Java Project
+name: CI Pipeline
 
-on: 
+on:
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
   build:
@@ -17,10 +16,10 @@ jobs:
       - name: Set Up Java
         uses: actions/setup-java@v3
         with:
-          distribution: 'temurin'  # Use OpenJDK (you can change it)
-          java-version: '17'       # Change version if needed
+          distribution: 'temurin'
+          java-version: '11'
 
       - name: Build and Run Tests
-        run: |cd DemoQAFramework
-          mvn clean install    # Build the project
-          mvn test             # Run tests
+        run: |
+          cd DemoQAFramework  # Move into the project directory
+          mvn clean install
