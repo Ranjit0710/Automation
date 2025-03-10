@@ -2,6 +2,7 @@ package base;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import com.aventstack.extentreports.ExtentReports;
@@ -16,8 +17,8 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+        //WebDriverManager.FirefoxDriver().setup();
+        driver = new FirefoxDriver();
         driver.manage().window().maximize();
         driver.get("https://demoqa.com/automation-practice-form");
 
