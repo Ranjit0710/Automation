@@ -18,7 +18,7 @@ public class BaseTest {
     @BeforeClass
     public void setUp() {
         //WebDriverManager.FirefoxDriver().setup();
-        driver = new FirefoxDriver();
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://demoqa.com/automation-practice-form");
 
