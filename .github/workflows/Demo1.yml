@@ -56,10 +56,10 @@ jobs:
         with:
           server_address: smtp.gmail.com
           server_port: 587
-          username: "your-email@gmail.com"
-          password: ${{ secrets.EMAIL_PASSWORD }}  # Use the App Password stored in GitHub Secrets
+          username: "ranjit.bachute@thinkitive.com"
+          password: ${{ secrets.sfqg amma zpvb slyq  }}  # Use the App Password stored in GitHub Secrets
           subject: "Automated Test Report - GitHub Actions"
-          to: "team1@example.com, team2@example.com"
-          from: "your-email@gmail.com"
+          to: "ashish.kulkarni@thinkitive.com"
+          from: "ranjit.bachute@thinkitive.com"
           body: "Hello Team,\n\nPlease find the attached Extent Report.\n\nBest,\nCI/CD Pipeline"
           attachments: "reports/ExtentReport.html"
